@@ -1,78 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F7FF">
+    android:background="#F4F7FF"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:padding="24dp">
+        android:gravity="center_horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Bilkul Top Par Full-Width College Picture -->
+        <ImageView
+            android:id="@+id/ivCollegeLogo"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:src="@drawable/clglogo"
+            android:scaleType="centerCrop"
+            android:contentDescription="College Banner" />
+
+        <!-- Graduation Cap jo half college pic par aur half neeche aayegi -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="-41dp"
+            app:cardCornerRadius="41dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="🎓"
+                android:textSize="44sp"
+                android:gravity="center" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Neeche Form Wala Hissa Padding Ke Sath -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🎓"
-            android:textSize="65sp"
-            android:layout_marginTop="45dp"/>
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Campus Lost &amp; Found"
-            android:textSize="27sp"
-            android:textStyle="bold"
-            android:textColor="#123675"
-            android:gravity="center"
-            android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="Campus Lost &amp; Found"
+                android:textColor="#123675"
+                android:textSize="27sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Find • Report • Reunite"
-            android:textSize="16sp"
-            android:textColor="#536786"
-            android:layout_marginTop="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Find • Report • Reunite"
+                android:textColor="#536786"
+                android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="Email Address"
-            android:inputType="textEmailAddress"
-            android:backgroundTint="#2467C5"
-            android:layout_marginTop="45dp"
-            android:padding="12dp"/>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#2467C5"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:backgroundTint="#2467C5"
-            android:layout_marginTop="18dp"
-            android:padding="12dp"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#2467C5"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="12dp" />
 
-        <Button
-            android:id="@+id/loginBtn"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="Login"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#1764C0"
-            android:layout_marginTop="28dp"/>
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#1764C0"
+                android:text="Login"
+                android:textColor="#FFFFFF" />
 
-        <Button
-            android:id="@+id/signupBtn"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="Create New Account"
-            android:textColor="#1764C0"
-            android:backgroundTint="#DCE9FF"
-            android:layout_marginTop="12dp"/>
+            <Button
+                android:id="@+id/signupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#DCE9FF"
+                android:text="Create New Account"
+                android:textColor="#1764C0" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
